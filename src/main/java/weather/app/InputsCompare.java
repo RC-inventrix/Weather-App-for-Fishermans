@@ -1,0 +1,47 @@
+package weather.app;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class InputsCompare {
+    private LocalDate date;
+    private String location;
+    private LocalTime time;
+    private int noOfCrewMembers;
+
+    public InputsCompare() {
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public LocalTime getTime() {
+        return time;
+    }
+
+    public void setTime(LocalTime time) {
+        this.time = time;
+    }
+
+    public int getNoOfCrewMembers() {
+        return noOfCrewMembers;
+    }
+
+    public void setNoOfCrewMembers(int noOfCrewMembers) {
+        this.noOfCrewMembers = noOfCrewMembers;
+    }
+
+}
