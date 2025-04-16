@@ -3,13 +3,13 @@ package weather.app;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class InputsCompare {
+public class Inputs {
     private LocalDate date;
     private String location;
     private LocalTime time;
     private int noOfCrewMembers;
 
-    public InputsCompare() {
+    public Inputs() {
     }
 
     public LocalDate getDate() {
