@@ -8,9 +8,17 @@ public class Inputs {
     private String location;
     private LocalTime time;
     private int noOfCrewMembers;
-
-    public Inputs() {
-    }
+    /*
+     * private LocalDate expectedReturnDate;
+     * 
+     * public LocalDate getExpectedReturnDate() {
+     * return expectedReturnDate;
+     * }
+     * 
+     * public void setExpectedReturnDate(LocalDate expectedReturnDate) {
+     * this.expectedReturnDate = expectedReturnDate;
+     * }
+     */
 
     public LocalDate getDate() {
         return date;
