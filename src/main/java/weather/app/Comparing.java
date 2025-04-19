@@ -1,20 +1,25 @@
 package weather.app;
 
 public class Comparing {
-    public static String comapare(WeatherData data) {
-        if (data.getRainProbability() > 70 ||
-                data.getWindSpeed() > 50 ||
-                data.getWaveHeight() > 2.5 ||
-                data.isStorms() ||
-                data.getVisibility() < 3 ||
-                data.isLightning()) {
-            return "❌ Not Safe to Go";
+
+    public static String compare(WeatherData data) {
+        System.out.println("Debug data");
+        System.out.println("Rain Probability: " + data.getRainProbability());
+        System.out.println("Wind Speed: " + data.getWindSpeed());
+        System.out.println("Visibility: " + data.getVisibility());
+        System.out.println("Lightning: " + data.isLightning());
+        System.out.println("Storms: " + data.isStorms());
+        System.out.println("Debug data end");
+
+        if (data.getRainProbability() > 70 || data.getWindSpeed() > 50 || data.isStorms()
+                || data.getVisibility() < 1000
+                || data.isLightning()) {
+            return " Not Safe to Go";
         } else if (data.getRainProbability() > 50 ||
-                data.getWindSpeed() > 30 ||
-                data.getWaveHeight() > 1.5) {
-            return "⚠️ Caution: Risky Conditions";
+                data.getWindSpeed() > 30) {
+            return " Caution: Risky Conditions";
         } else {
-            return "✅ Safe to Go";
+            return " Safe to Go";
         }
     }
 }

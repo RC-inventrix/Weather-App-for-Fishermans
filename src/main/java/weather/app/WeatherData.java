@@ -3,8 +3,8 @@ package weather.app;
 public class WeatherData {
     private double rainProbability;
     private double windSpeed;
-    private double waveHeight;
-    private double visibility;
+
+    private int visibility;
     private boolean lightning;
     private boolean storms;
 
@@ -27,19 +27,11 @@ public class WeatherData {
         this.windSpeed = windSpeed;
     }
 
-    public double getWaveHeight() {
-        return waveHeight;
-    }
-
-    public void setWaveHeight(double waveHeight) {
-        this.waveHeight = waveHeight;
-    }
-
-    public double getVisibility() {
+    public int getVisibility() {
         return visibility;
     }
 
-    public void setVisibility(double visibility) {
+    public void setVisibility(int visibility) {
         this.visibility = visibility;
     }
 

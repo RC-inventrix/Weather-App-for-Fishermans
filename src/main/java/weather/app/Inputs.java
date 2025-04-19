@@ -1,32 +1,24 @@
 package weather.app;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+/*import java.time.LocalDate;
+import java.time.LocalTime;*/
 
 public class Inputs {
-    private LocalDate date;
+    // private LocalDate date;
     private String location;
-    private LocalTime time;
-    private int noOfCrewMembers;
+    private String dateTime;
+    // private LocalTime time;
+    // private int noOfCrewMembers;
+
     /*
-     * private LocalDate expectedReturnDate;
-     * 
-     * public LocalDate getExpectedReturnDate() {
-     * return expectedReturnDate;
+     * public LocalDate getDate() {
+     * return date;
      * }
      * 
-     * public void setExpectedReturnDate(LocalDate expectedReturnDate) {
-     * this.expectedReturnDate = expectedReturnDate;
+     * public void setDate(LocalDate date) {
+     * this.date = date;
      * }
      */
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
 
     public String getLocation() {
         return location;
@@ -36,20 +28,32 @@ public class Inputs {
         this.location = location;
     }
 
-    public LocalTime getTime() {
-        return time;
+    public String getDateTime() {
+        return dateTime;
     }
 
-    public void setTime(LocalTime time) {
-        this.time = time;
+    public void setDateTime(String dateTime) {
+        this.dateTime = dateTime;
     }
 
-    public int getNoOfCrewMembers() {
-        return noOfCrewMembers;
-    }
+    /*
+     * public LocalTime getTime() {
+     * return time;
+     * }
+     * 
+     * public void setTime(LocalTime time) {
+     * this.time = time;
+     * }
+     */
 
-    public void setNoOfCrewMembers(int noOfCrewMembers) {
-        this.noOfCrewMembers = noOfCrewMembers;
-    }
+    /*
+     * public int getNoOfCrewMembers() {
+     * return noOfCrewMembers;
+     * }
+     * 
+     * public void setNoOfCrewMembers(int noOfCrewMembers) {
+     * this.noOfCrewMembers = noOfCrewMembers;
+     * }
+     */
 
 }
