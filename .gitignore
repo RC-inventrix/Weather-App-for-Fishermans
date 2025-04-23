@@ -64,6 +64,9 @@ buildNumber.properties
 
 # Mono auto generated files
 mono_crash.*
+.idea/
+*.iml
+
 
 # Build results
 [Dd]ebug/
