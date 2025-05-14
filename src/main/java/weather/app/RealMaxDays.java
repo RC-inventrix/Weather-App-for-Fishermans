@@ -1,29 +1,27 @@
 package weather.app;
 
 public class RealMaxDays {
-    final static int FORECASTQTY = 8;
+    final static int FORECAST_CONSTANT = 8;
 
-    public static int realMaxDays(Inputs inputdata) {
-        int numberOfForecasts = inputdata.getMaxDays() * FORECASTQTY;
-        WeatherData data = null;
-        Inputs inputdataCopy = inputdata;
+    public static int realMaxDays(Inputs inputData) {
+        int numberOfForecasts = inputData.getMaxDays() * FORECAST_CONSTANT;
+        WeatherData data;
         for (int i = 0; i < numberOfForecasts; i++) {
-            data = DataRetriever.dataRetriever(inputdataCopy);
+            data = DataRetriever.dataRetriever(inputData);
 
 
-
-
+            assert data != null;
             int result = Comparing.compare(data);
 
 
             if (result == -1) {
 
-                return (i / FORECASTQTY);
+                return (i / FORECAST_CONSTANT);
             }
 
-            inputdataCopy.setDateTime(ThreeHourTimeUpdater.updateTime(inputdataCopy));
+            inputData.setDateTime(ThreeHourTimeUpdater.updateTime(inputData));
         }
 
-        return inputdata.getMaxDays(); // All forecasts safe
+        return inputData.getMaxDays(); // All forecasts safe
     }
 }
