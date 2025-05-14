@@ -2,6 +2,13 @@ package weather.app;
 
 public class Inputs {
 
+
+
+    private String location;
+    private String dateTime;
+    private int noOfCrewMembers;
+    private int maxDays;
+
     public int getNoOfCrewMembers() {
         return noOfCrewMembers;
     }
@@ -17,11 +24,6 @@ public class Inputs {
     public void setMaxDays(int maxDays) {
         this.maxDays = maxDays;
     }
-
-    private String location;
-    private String dateTime;
-    private int noOfCrewMembers;
-    private int maxDays;
 
     public String getLocation() {
         return location;

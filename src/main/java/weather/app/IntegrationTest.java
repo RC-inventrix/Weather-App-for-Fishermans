@@ -3,10 +3,10 @@ package weather.app;
 public class IntegrationTest {
     public static void main(String[] args) {
         Inputs inputData = new Inputs();
-        inputData.setLocation("Matara");
-        inputData.setDateTime("2025-04-23 09:00:00");
+        inputData.setLocation("Trincomalee");
+        inputData.setDateTime("2025-05-14 21:00:00");
         inputData.setNoOfCrewMembers(5);
-        inputData.setMaxDays(2);
+        inputData.setMaxDays(3);
 
         FinalDecision.finalDecision(inputData);
     }

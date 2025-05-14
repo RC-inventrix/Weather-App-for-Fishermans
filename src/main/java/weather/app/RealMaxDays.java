@@ -6,14 +6,24 @@ public class RealMaxDays {
     public static int realMaxDays(Inputs inputdata) {
         int numberOfForecasts = inputdata.getMaxDays() * FORECASTQTY;
         WeatherData data = null;
+        Inputs inputdataCopy = inputdata;
         for (int i = 0; i < numberOfForecasts; i++) {
-            data = DataRetriever.dataRetriever(inputdata);
-            if (Comparing.compare(data) == -1) {
-                return i / FORECASTQTY;
+            data = DataRetriever.dataRetriever(inputdataCopy);
+
+
+
+
+            int result = Comparing.compare(data);
+
+
+            if (result == -1) {
+
+                return (i / FORECASTQTY);
             }
-            inputdata.setDateTime(ThreeHourTimeUpdater.updateTime(inputdata));
+
+            inputdataCopy.setDateTime(ThreeHourTimeUpdater.updateTime(inputdataCopy));
         }
 
-        return inputdata.getMaxDays();
+        return inputdata.getMaxDays(); // All forecasts safe
     }
 }
