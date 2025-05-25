@@ -25,7 +25,7 @@ public class MainController implements Initializable {
     @FXML
     private DatePicker iDdate;
     @FXML
-    private ChoiceBox<?> iDtime;
+    private ChoiceBox<String> iDtime;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -33,11 +33,11 @@ public class MainController implements Initializable {
         iDlocation.getItems().addAll("Galle", "Matara", "Hambantota", "Trincomalee", "Jaffna",
                 "Negombo", "Colombo", "Batticaloa", "Kalpitiya");
 
-        iDlocation.setOnAction(event -> {
-            String selectedLocation = iDlocation.getValue();
 
-            inputData.setLocation(selectedLocation);
-        });
+        iDtime.getItems().addAll("00:00:00","03:00:00","06:00:00","09:00:00","12:00:00","15:00:00","18:00:00","21:00:00");
+
+
+
 
 
 
