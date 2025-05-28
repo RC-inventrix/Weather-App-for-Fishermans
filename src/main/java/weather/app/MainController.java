@@ -29,10 +29,9 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Inputs inputData = new Inputs();
+
         iDlocation.getItems().addAll("Galle", "Matara", "Hambantota", "Trincomalee", "Jaffna",
                 "Negombo", "Colombo", "Batticaloa", "Kalpitiya");
-
 
         iDtime.getItems().addAll("00:00:00","03:00:00","06:00:00","09:00:00","12:00:00","15:00:00","18:00:00","21:00:00");
 
@@ -41,6 +40,25 @@ public class MainController implements Initializable {
 
 
 
+    }
+
+    private void handleEnterButton() {
+        Inputs inputData = new Inputs();
+        inputData.setLocation(iDlocation.getValue());
+        DateTimeIntergration.datetimeintegration(iDdate.getValue().toString(), iDtime.getValue(), inputData);
+        inputData.setNoOfCrewMembers(Integer.parseInt(iDcrews.getText().trim()));
+        inputData.setMaxDays(Integer.parseInt(iDmaxdays.getText().trim()));
+
+
+
+    }
+    private void handleResetButton() {
+        iDcrews.clear();
+        iDmaxdays.clear();
+        iDresults.clear();
+        iDlocation.setValue(null);
+        iDdate.setValue(null);
+        iDtime.setValue(null);
     }
 
 
