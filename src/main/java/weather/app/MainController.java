@@ -49,7 +49,8 @@ public class MainController implements Initializable {
         inputData.setNoOfCrewMembers(Integer.parseInt(iDcrews.getText().trim()));
         inputData.setMaxDays(Integer.parseInt(iDmaxdays.getText().trim()));
 
-
+        String result = FinalDecision.finalDecision(inputData);
+        iDresults.setText(result);
 
     }
     private void handleResetButton() {
