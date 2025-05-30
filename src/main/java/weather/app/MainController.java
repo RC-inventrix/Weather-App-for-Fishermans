@@ -42,7 +42,8 @@ public class MainController implements Initializable {
 
     }
 
-    private void handleEnterButton() {
+    @FXML
+    public void handleEnterButton() {
         Inputs inputData = new Inputs();
         inputData.setLocation(iDlocation.getValue());
         DateTimeIntergration.datetimeintegration(iDdate.getValue().toString(), iDtime.getValue(), inputData);
@@ -53,7 +54,8 @@ public class MainController implements Initializable {
         iDresults.setText(result);
 
     }
-    private void handleResetButton() {
+    @FXML
+    public void handleResetButton() {
         iDcrews.clear();
         iDmaxdays.clear();
         iDresults.clear();
