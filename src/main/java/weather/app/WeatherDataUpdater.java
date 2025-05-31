@@ -8,7 +8,6 @@ import java.util.stream.Collectors;
 import org.json.*;
 
 public class WeatherDataUpdater {
-
     static final String DB_URL = "jdbc:mysql://localhost:3306/weather_app";
     static final String DB_USER = "root";
     static final String DB_PASS = "";
@@ -19,7 +18,8 @@ public class WeatherDataUpdater {
             "Negombo", "Colombo", "Batticaloa", "Kalpitiya"
     };
 
-    public static void main(String[] args) {
+    public static void updateWeatherData() {
+
         try {
             // Load JDBC driver
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -112,5 +112,10 @@ public class WeatherDataUpdater {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+
+    public static void main(String[] args) {
+        updateWeatherData();
     }
 }
