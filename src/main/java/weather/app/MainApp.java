@@ -18,7 +18,9 @@ public class MainApp extends Application {
         primaryStage.show();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
+        WeatherDataUpdater.updateWeatherData();
         launch(args);
     }
 }
