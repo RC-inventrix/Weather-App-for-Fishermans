@@ -27,8 +27,8 @@
          <font>
             <Font size="10.0" />
          </font></Label>
-      <Label fx:id="idCrewMessage" layoutX="511.0" layoutY="199.0" prefHeight="17.0" prefWidth="137.0" textFill="#e40c0c" />
-      <Label fx:id="idMaxDayMessage" layoutX="511.0" layoutY="252.0" prefHeight="17.0" prefWidth="123.0" textFill="#fb0b0b" />
+      <Label fx:id="idCrewMessage" layoutX="511.0" layoutY="185.0" prefHeight="39.0" prefWidth="193.0" textFill="#e40c0c" wrapText="true" />
+      <Label fx:id="idMaxDayMessage" layoutX="511.0" layoutY="238.0" prefHeight="39.0" prefWidth="177.0" textFill="#fb0b0b" wrapText="true" />
       <Label fx:id="idMainMessage" layoutX="279.0" layoutY="344.0" prefHeight="17.0" prefWidth="220.0" textFill="#dd0c0c" />
    </children>
 </AnchorPane>

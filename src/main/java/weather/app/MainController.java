@@ -126,6 +126,25 @@ public class MainController implements Initializable {
             return;
         }
 
+        if(date.equals(LocalDate.now())){
+            if(Integer.parseInt(maxDaysText) > 3){
+                idMaxDayMessage.setText("❌ Max days should be equal to or less than 3 days.");
+                return;
+            }
+        }
+        if(date.equals(LocalDate.now().plusDays(1))){
+            if(Integer.parseInt(maxDaysText) > 2){
+                idMaxDayMessage.setText("❌ Max days should be equal to or less than 2 days.");
+                return;
+            }
+        }
+        if(date.equals(LocalDate.now().plusDays(2))){
+            if(Integer.parseInt(maxDaysText) > 1){
+                idMaxDayMessage.setText("❌ Max days should be equal to or less than 1 days.");
+                return;
+            }
+        }
+
         // If all inputs are valid, process them
         idMaxDayMessage.setText("");
         idCrewMessage.setText("");
